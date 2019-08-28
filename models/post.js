@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     // this should join with profiles models
     Post.associate = (models) => {
-      Post.belongsTo(models.Profiles, {
+      Post.belongsTo(models.Profile, {
         
         foreignKey: {
           allowNull: false
