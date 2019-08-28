@@ -16,5 +16,5 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: "cascade"
       })
     }
-    return Author;
+    return Profile;
   };
