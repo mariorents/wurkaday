@@ -1,2 +1,8 @@
-#navBar {
-};  
+#logo {
+    padding: 5px;
+    margin-top: 5px;
+};
+
+#navbarNavDropdown {
+    margin-bottom: 5px;
+}
