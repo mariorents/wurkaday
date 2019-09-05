@@ -7,8 +7,9 @@ $(document).ready(function () {
 
     let posts;
 
-    
+    // needs testing idk if it works
     const url = window.location.search;
+
     const profileId;
     if (url.indexOf("?name=") !== -1) {
         profileId = url.split("=")[1];
@@ -18,7 +19,8 @@ $(document).ready(function () {
     else {
         getPosts();
     }
-
+    // needs testing
+    
     function getPosts(profile) {
         profileId = profile || "";
         if (profileId) {
