@@ -78,8 +78,10 @@ $(document).ready(function () {
         newRightMedia.addClass("media-right");
         var deleteBtn = $("<button>");
         
-        
+
         // need to continue making the post box 
+
+        
         // need to append correctly to get bulma media block correct
         
         var newPostCardBody = $("<div>");
