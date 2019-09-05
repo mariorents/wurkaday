@@ -81,7 +81,7 @@ $(document).ready(function () {
 
         // need to continue making the post box 
 
-        
+        newPostTitle.append()
         // need to append correctly to get bulma media block correct
         
         var newPostCardBody = $("<div>");
