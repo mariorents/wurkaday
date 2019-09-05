@@ -3,6 +3,8 @@ $(document).ready(function () {
     const postContainer = $(".postPlace");
     const postCategory = $("#category");
 
+    $(document).on("click", "button.delete", handlePostDelete);
+
     let posts;
 
     
@@ -53,7 +55,7 @@ $(document).ready(function () {
         }
         postContainer.append(postsToAdd);
       };
-
+    //   creates the bulma post for each post according to out database
       function createNewRow(post) {
         var formattedDate = new Date(post.createdAt);
         formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
@@ -77,29 +79,29 @@ $(document).ready(function () {
         var newRightMedia = $("<div>");
         newRightMedia.addClass("media-right");
         var deleteBtn = $("<button>");
+        deleteBtn.addClass("delete")
         
 
-        // need to continue making the post box 
-
-        newPostTitle.append()
-        // need to append correctly to get bulma media block correct
-        
-        var newPostCardBody = $("<div>");
-        newPostCardBody.addClass("card-body");
-        var newPostBody = $("<p>");
-        newPostTitle.text(post.title + " ");
-        newPostBody.text(post.body);
-        newPostDate.text(formattedDate);
-        newPostTitle.append(newPostDate);
-        newPostCardHeading.append(deleteBtn);
-        newPostCardHeading.append(editBtn);
-        newPostCardHeading.append(newPostTitle);
-        newPostCardHeading.append(newPostAuthor);
-        newPostCardBody.append(newPostBody);
-        newPostCard.append(newPostCardHeading);
-        newPostCard.append(newPostCardBody);
-        newPostCard.data("post", post);
-        return newPostCard;
-      }
-
+        // hopefully these appends work to create bulma media post
+        newMedia.append(newLeftFigure);
+        newMedia.append(newMediaContent);
+        newMedia.append(newRightMedia);
+        newLeftFigure.append(newLogoImg);
+        newMediaContent.append(newPostTitle);
+        newMediaContent.append(newContent);
+        newRightMedia.append(deleteBtn);
+        newMedia.data("post", post)
+        return newMedia;
+    }
 })
+
+function handlePostDelete() {
+    var currentPost = $(this)
+      .parent()
+      .parent()
+      .data("post");
+    deletePost(currentPost.id);
+  }
+        
+        
+        
