@@ -20,7 +20,12 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           len: [1]
         }
+      },
+      payment: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        
       }
+
     });
     // this should join with profiles models
     Post.associate = (models) => {
