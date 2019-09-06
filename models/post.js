@@ -24,7 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       payment: {
         type: DataTypes.INTEGER.UNSIGNED,
         
-      }
+      },
+      
+
 
     });
     // this should join with profiles models

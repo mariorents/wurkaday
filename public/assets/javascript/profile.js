@@ -21,12 +21,9 @@ $(document).ready(function(){
         $.get("/api/posts" + profileId, function(data) {
           console.log("Posts", data);
           posts = data;
-          if (!posts || !posts.length) {
-            displayEmpty(profile);
-          }
-          else {
+          
             initializeRows();
-          }
+          
         });
       }
 
