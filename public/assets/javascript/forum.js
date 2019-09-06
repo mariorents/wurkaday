@@ -5,7 +5,8 @@ $(document).ready(function () {
     const paymentInput = $("#paymentAmount");
     const subjectInput = $("#subjectType");
     const descriptionInput = $("#descriptionInput");
-    
+    const nameInput = $("#nameInput");
+    const emailInput = $("#emailInput");
     
     
     
@@ -14,10 +15,13 @@ $(document).ready(function () {
 
         
         const newPost = {
+            name: nameInput.val(),
+            email: emailInput.val(),
             title: titleInput.val(),
             body: descriptionInput.val(),
             category: subjectInput.val(),
             payment: paymentInput.val(),
+            
             
         };
         
