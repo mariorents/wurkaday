@@ -4,15 +4,25 @@ $(document).ready(function () {
     const paymentInput = $("#paymentAmount");
     const subjectInput = $("#subjectType");
     const descriptionInput = $("#descriptionInput");
+<<<<<<< HEAD
+=======
+    const nameInput = $("#nameInput");
+    const emailInput = $("#emailInput");
+    
+    
+>>>>>>> 201a3575f5277f321ef88d461877998009d5c90d
     
     const forumSubmit = (event) => {
         event.preventDefault();
 
         const newPost = {
+            name: nameInput.val(),
+            email: emailInput.val(),
             title: titleInput.val(),
             body: descriptionInput.val(),
             category: subjectInput.val(),
             payment: paymentInput.val(),
+            
             
         };
         
