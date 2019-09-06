@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Login Form Tutorial</title>
-		<style>
-		.login-form {
-			width: 300px;
-			margin: 0 auto;
-			font-family: Tahoma, Geneva, sans-serif;
-		}
-		.login-form h1 {
-			text-align: center;
-			color: #4d4d4d;
-			font-size: 24px;
-			padding: 20px 0 20px 0;
-		}
-		.login-form input[type="password"],
-		.login-form input[type="text"] {
-			width: 100%;
-			padding: 15px;
-			border: 1px solid #dddddd;
-			margin-bottom: 15px;
-			box-sizing:border-box;
-		}
-		.login-form input[type="submit"] {
-			width: 100%;
-			padding: 15px;
-			background-color: #535b63;
-			border: 0;
-			box-sizing: border-box;
-			cursor: pointer;
-			font-weight: bold;
-			color: #ffffff;
-		}
-		</style>
-	</head>
-	<body>
-		<div class="login-form">
-			<h1>Login Form</h1>
-			<form action="auth" method="POST">
-				<input type="text" name="username" placeholder="Username" required>
-				<input type="password" name="password" placeholder="Password" required>
-				<input type="submit">
-			</form>
-		</div>
-	</body>
+<html lang="en">
+
+<head>
+  <title>Wurk-A-Day</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+		<h2>Wurk-A-Day Login</h2>
+		<br>
+        <form class="login">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>  
+          <button type="submit" class="btn btn-default">Login</button>
+        </form>
+        <br />
+        <p>Or sign up <a href="signup.html">here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+
+</body>
+
 </html>
