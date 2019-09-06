@@ -1,7 +1,12 @@
 $(document).ready(function () {
 
+<<<<<<< HEAD
     const postContainer = $("#postPlace");
     const postCategory = $("#category");
+=======
+  const postContainer = $(".postPlace");
+  const postCategory = $("#category");
+>>>>>>> 35ec438e96b455bc93f205d2cd85dcb552096292
 
     $(document).on("click", "button.delete", handlePostDelete);
 
@@ -36,15 +41,15 @@ $(document).ready(function () {
           
           
 
-      function deletePost(id) {
-        $.ajax({
-          method: "DELETE",
-          url: "/api/posts/" + id
-        })
-          .then(function() {
-            getPosts(postCategory.val());
-          });
-      };
+  function deletePost(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/posts/" + id
+    })
+      .then(function () {
+        getPosts(postCategory.val());
+      });
+  };
 
 
       function initializeRows() {
