@@ -1,5 +1,5 @@
 const db = require("../models");
-const passport = require("../models");
+
 
 module.exports = app => {
     app.post("/api/login", passport.authenticate("local"), (req, res) => {
