@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       Post.belongsTo(models.Profile, {
         
         foreignKey: {
-          allowNull: false
+          allowNull: true
         }
       });
   
