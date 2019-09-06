@@ -13,15 +13,18 @@
     <title>Wurkaday</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./css/profile.css">
     <!--Bulma Framework-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/forum.js"></script>
 </head>
 
 <body>
-    <div class="navBar"></div>
-        <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
+    <div class="navBar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <span class="navbar-brand mb-0 h1" id="logo">Wurkaday</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,44 +52,54 @@
             </div>
         </nav>
     </div>
-    <div class="container">
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="hpContent">
-            <div class="col p-lg-5 mx-auto my-auto">
-                <h1 class="display-4 font-weight-normal">Welcome to Wurkaday</h1>
-                <p class="lead font-weight-normal">If you're having a hard time finding a stable job or you just really
-                    enjoy helping others without having to find purpose in everything you do Wurkaday is here. </p>
+    <div class="container" id="forumContent">
+        <div class="field">
+            <label class="label">Job</label>
+            <div class="control">
+                <input class="input" id="jobTitle" type="text" placeholder="Text input">
             </div>
-            <div class="product-device box-shadow d-none d-md-block"></div>
-            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
         </div>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="hpContent">
-            <div class="col p mx-auto my-auto">
-                <h1 class="display-4 font-weight-normal">Find a job. Easy.</h1>
-                <p class="lead font-weight-normal">On Wurkaday finding a job is simple. No interviews. No resumes. Look through our "extensive" list of jobs and pick the right one for you and your monetary needs.  </p>
+
+
+        <div class="field">
+            <label class="label">Payment</label>
+            <div class="control">
+                <input class="input" id="paymentAmount" type="text" placeholder="$$">
             </div>
-            <div class="product-device box-shadow d-none d-md-block"></div>
-            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
         </div>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="hpContent">
-            <div class="col p mx-auto my-auto">
-                <h1 class="display-4 font-weight-normal">Need something done?</h1>
-                <p class="lead font-weight-normal">With Wurkaday getting something done can be as easy as asking. Just post a job and wait for the suckers *cough* I mean the respectable and driven go getters to accept your request!</p>
+        <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+                <div class="select">
+                    <select id="subjectType">
+                        <option>Select job field</option>
+                        <option>Yard Work</option>
+                        <option>It Work</option>
+                        <option>House Work</option>
+                        <option>Auto</option>
+                    </select>
+                </div>
             </div>
-            <div class="product-device box-shadow d-none d-md-block"></div>
-            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
         </div>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="hpContent">
-            <div class="col p mx-auto my-auto">
-                <h1 class="display-4 font-weight-normal">Jobs only people</h1>
-                <p class="lead font-weight-normal">I know it says jobs but this isn't Craigslist so lets not have another Casual Encounters situation...</p>
+
+        <div class="field">
+            <label class="label">Job Description</label>
+            <div class="control">
+                <textarea class="textarea" id="descriptionInput" placeholder="Textarea"></textarea>
             </div>
-            <div class="product-device box-shadow d-none d-md-block"></div>
-            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+        </div>
+
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link" id="submitBtn">Submit</button>
+            </div>
+            <div class="control">
+                <button class="button is-text">Cancel</button>
+            </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
         </script>
