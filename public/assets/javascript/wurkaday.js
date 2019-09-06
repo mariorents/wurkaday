@@ -71,11 +71,14 @@ $(document).ready(function () {
         var newMediaContent = $("<div>");
         newMediaContent.addClass("media-content");
         var newContent = $("<div>");
+        var posterName = $("<p>")
+        posterName.addClass("postName");
+        posterName.text(post.name)
         newContent.addClass("content");
         newContent.text(post.body)
         var newPoster = $("<h1>");
         newPoster.addClass("poster-name");
-        // newPoster.text("Written by: " + post.Profile.name)
+        newPoster.text("Written by: " + post.name)
         var newPostTitle = $("<p>");
         newPostTitle.addClass("post-title");
         newPostTitle.text(post.title + " ")
@@ -90,6 +93,7 @@ $(document).ready(function () {
         newMedia.append(newMediaContent);
         newMedia.append(newRightMedia);
         newLeftFigure.append(newLogoImg);
+        newMediaContent.append(posterName);
         newMediaContent.append(newPostTitle);
         newMediaContent.append(newContent);
         newRightMedia.append(deleteBtn);
