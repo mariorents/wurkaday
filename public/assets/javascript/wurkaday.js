@@ -62,31 +62,45 @@ $(document).ready(function () {
         newMedia.addClass("media");
         var newLeftFigure = $("<figure>");
         newLeftFigure.addClass("media-left");
-        var newLogoImg = $("<p scr='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwicjbm-ubbkAhVOip4KHSSkDS8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.lapsi.org%2Fpics%2Fj&psig=AOvVaw2aYZDVq_H2Z-8CDa7LwQ2t&ust=1567661802647506'>");
+        var newLogoImg = $("<img>");
+        newLogoImg.attr("src", "assets/images/image.png")
         newLogoImg.addClass("image is-64x64");
         var newMediaContent = $("<div>");
         newMediaContent.addClass("media-content");
         var newContent = $("<div>");
         newContent.addClass("content");
-        newContent.text(post.body)
+        newContent.text("description: " + post.body)
         var newPoster = $("<h1>");
+        var paymentBox = $("<p>");
+        paymentBox.addClass("payment");
+        paymentBox.text("Payment is: $" + post.payment)
         newPoster.addClass("poster-name");
-        newPoster.text("Written by: " + post.name)
+        newPoster.text("Written by: " + post.name);
         var newPostTitle = $("<p>");
         newPostTitle.addClass("post-title");
-        newPostTitle.text(post.title + " ")
+        newPostTitle.text("Title: " + post.title + " ")
         var newRightMedia = $("<div>");
         newRightMedia.addClass("media-right");
         var deleteBtn = $("<button>");
         deleteBtn.addClass("delete")
-        
+        var emailBox = $("<p>");
+        emailBox.addClass("emailBox");
+        emailBox.text("Email: " + post.email);
+        var subjectBox = $("<p>");
+        subjectBox.addClass("subjectBox");
+        subjectBox.text("Subject: " + post.category);
 
         // hopefully these appends work to create bulma media post
         newMedia.append(newLeftFigure);
         newMedia.append(newMediaContent);
         newMedia.append(newRightMedia);
         newLeftFigure.append(newLogoImg);
+        newMediaContent.append(newPoster);
         newMediaContent.append(newPostTitle);
+        
+        newMediaContent.append(emailBox);
+        newMediaContent.append(paymentBox);
+        newMediaContent.append(subjectBox);
         newMediaContent.append(newContent);
         newRightMedia.append(deleteBtn);
         newMedia.data("post", post)
