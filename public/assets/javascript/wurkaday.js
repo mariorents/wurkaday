@@ -10,33 +10,31 @@ $(document).ready(function () {
     // needs testing idk if it works
     const url = window.location.search;
 
-    const profileId;
-    if (url.indexOf("?name=") !== -1) {
-        profileId = url.split("=")[1];
-        getPosts(profileId);
-    }
+    // const profileId;
+    // if (url.indexOf("?name=") !== -1) {
+    //      getPosts(profileId);
+    // }  profileId = url.split("=")[1];
+     
     
-    else {
-        getPosts();
-    }
+    // else {
+    //     getPosts();
+    // }
     // needs testing
-    
-    function getPosts(profile) {
-        profileId = profile || "";
-        if (profileId) {
-          profileId = "/?name=" + profileId;
-        }
-        $.get("/api/posts" + profileId, function(data) {
+     getPosts();
+     
+    function getPosts(cb) {
+        
+        $.get("/api/posts", function(data) {
           console.log("Posts", data);
           posts = data;
-          if (!posts || !posts.length) {
-            displayEmpty(profile);
-          }
-          else {
-            initializeRows();
-          }
+          console.log(data);
+          initializeRows();
         });
+        console.log(cb);
       }
+          
+          
+          
 
       function deletePost(id) {
         $.ajax({

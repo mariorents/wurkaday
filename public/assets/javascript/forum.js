@@ -8,18 +8,17 @@ $(document).ready(function () {
     
     
     
+    
     const forumSubmit = (event) => {
         event.preventDefault();
 
-        // if (!titleInput.val().trim() || !paymentInput.val().trim() || !subjectInput.val() || !descriptionInput.val()) {
-        //     return;
-        // }
+        
         const newPost = {
             title: titleInput.val(),
             body: descriptionInput.val(),
             category: subjectInput.val(),
             payment: paymentInput.val(),
-            // profile: jake
+            
         };
         
         submitPost(newPost);
@@ -29,8 +28,10 @@ $(document).ready(function () {
     
     function submitPost(post) {
         $.post("/api/posts", post, function() {
-            window.location.href = "/posts";
+            window.location.href = "/posts.html";
+            console.log(post);
         });
+        
     }
     
     
