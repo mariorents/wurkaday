@@ -1,17 +1,6 @@
 $(document).ready(function () {
-
-<<<<<<< HEAD
-  const postContainer = $(".postPlace");
-  const postCategory = $("#category");
-=======
-<<<<<<< HEAD
     const postContainer = $("#postPlace");
     const postCategory = $("#category");
-=======
-  const postContainer = $(".postPlace");
-  const postCategory = $("#category");
->>>>>>> 35ec438e96b455bc93f205d2cd85dcb552096292
->>>>>>> bd2aaa47520092a5ed454a12747068ceaef725d7
 
     $(document).on("click", "button.delete", handlePostDelete);
 
@@ -82,7 +71,7 @@ $(document).ready(function () {
         newContent.text(post.body)
         var newPoster = $("<h1>");
         newPoster.addClass("poster-name");
-        // newPoster.text("Written by: " + post.Profile.name)
+        newPoster.text("Written by: " + post.name)
         var newPostTitle = $("<p>");
         newPostTitle.addClass("post-title");
         newPostTitle.text(post.title + " ")

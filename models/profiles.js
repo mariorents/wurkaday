@@ -6,12 +6,8 @@ module.exports = (sequelize, DataTypes) => {
            validate: {
             len: [1]
            }
-<<<<<<< HEAD
-        }
-=======
         },
         
->>>>>>> bd2aaa47520092a5ed454a12747068ceaef725d7
     });
     // this should join with the post.js model
     Profile.associate = (models) => {
