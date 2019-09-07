@@ -1,6 +1,7 @@
 #logo {
     padding: 5px;
     margin-top: 5px;
+    color: #F2BB1F!important;
 };
 
 #navbarNavDropdown {
@@ -25,4 +26,7 @@
 
 #hpContent {
     border-radius: 10px;
+}
+body {
+    background-color: #fcf0cf;
 }
