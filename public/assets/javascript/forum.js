@@ -4,13 +4,10 @@ $(document).ready(function () {
     const paymentInput = $("#paymentAmount");
     const subjectInput = $("#subjectType");
     const descriptionInput = $("#descriptionInput");
-<<<<<<< HEAD
-=======
     const nameInput = $("#nameInput");
     const emailInput = $("#emailInput");
     
     
->>>>>>> 201a3575f5277f321ef88d461877998009d5c90d
     
     const forumSubmit = (event) => {
         event.preventDefault();
@@ -35,7 +32,6 @@ $(document).ready(function () {
             window.location.href = "/posts.html";
             console.log(post);
         });
-<<<<<<< HEAD
         
     };
 
@@ -49,9 +45,6 @@ $(document).ready(function () {
             window.location.href = "/post";
           });
       }
-=======
-    }
->>>>>>> 23e94184fbcc146a486be9e6b0c1ed95b439ab7f
     
     $("#submitBtn").on("click", forumSubmit);
     
