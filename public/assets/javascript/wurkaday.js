@@ -112,7 +112,9 @@ $(document).ready(function () {
       .parent()
       .data("post");
       deletePost(currentPost.id);
-    }
+    };
+
+    
     
   })
         

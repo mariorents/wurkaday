@@ -3,7 +3,7 @@ $(document).ready(function(){
   const postCategory = $("#category");
 
   $(document).on("click", "button.delete", handlePostDelete);
-  
+  $(document).on("click", "button.edit", handlePostEdit);
   let posts;
 
   // needs testing idk if it works
@@ -116,5 +116,14 @@ function deletePost(id) {
     .parent()
     .data("post");
     deletePost(currentPost.id);
+  };
+// needs work
+  function handlePostEdit() {
+    var currentPost = $(this)
+      .parent()
+      .parent()
+      .data("post");
+    window.location.href = "/forum?post_id=" + currentPost.id;
   }
+  // needs work
     })

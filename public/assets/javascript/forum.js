@@ -36,7 +36,18 @@ $(document).ready(function () {
             console.log(post);
         });
         
-    }
+    };
+
+    function updatePost(post) {
+        $.ajax({
+          method: "PUT",
+          url: "/api/posts",
+          data: post
+        })
+          .then(function() {
+            window.location.href = "/post";
+          });
+      }
     
     
     $("#submitBtn").on("click", forumSubmit);
