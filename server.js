@@ -1,7 +1,4 @@
 const express = require("express");
-const passport = require('passport');
-const session = require('express-session');
-const exphbs = require('express-handlebars')
 // Sets up the Express App
 // =============================================================
 const app = express();
@@ -15,24 +12,12 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
-app.use(session({
-  secret: "keyboard cat",
-  resave: true,
-  saveUninitialized: true
-}));
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Handlebars 
-app.set('views', './app/views')
-app.engine('hbs', exphbs({
-  extname: '.hbs'
-}));
 app.set('view engine', '.hbs');
 
 // Static directory
-app.use(express.static("public"));
-
+app.use(express.static("public"));  
 // Routes
 // =============================================================
 require("./routes/html-routes.js")(app);
