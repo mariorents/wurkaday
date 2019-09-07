@@ -20,6 +20,18 @@
 .card-header{
     background-color: #f7d987!important;
 }
+
 body {
     background-color: #fcf0cf;
+    height: auto!important;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    height: auto!important;
+    width: 100%;
+    background-color: #fcf0cf;
+    background-image: #fcf0cf;
 }

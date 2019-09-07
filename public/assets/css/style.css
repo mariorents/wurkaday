@@ -29,4 +29,13 @@
 }
 body {
     background-color: #fcf0cf;
+    background-image: #fcf0cf;
+    height: 100%;
+    width: 100%;
+}
+html
+{
+    height: 100%;
+    width: 100%;
+    background-image: #fcf0cf;
 }

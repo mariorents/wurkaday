@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "twz3lyj99tv99twq",
-    "password": "fcg7plefwcl957ww",
-    "database": "ifg0nooau8ywyqax",
-    "host": "sp6xl8zoyvbumaa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "root",
+    "database": "wurkaday_db",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false
   },
