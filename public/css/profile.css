@@ -1,6 +1,7 @@
 #logo {
     padding: 5px;
     margin-top: 5px;
+    color: #F2BB1F!important;
 };
 
 #navbarNavDropdown {
@@ -17,6 +18,8 @@
     margin: 15px;
 }
 .card-header{
-    background-color: #abb3ba!important;
+    background-color: #f7d987!important;
 }
-
+body {
+    background-color: #fcf0cf;
+}
