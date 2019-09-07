@@ -101,7 +101,7 @@ $(document).ready(function () {
         newMediaContent.append(paymentBox);
         newMediaContent.append(subjectBox);
         newMediaContent.append(newContent);
-        newRightMedia.append(deleteBtn);
+        // newRightMedia.append(deleteBtn);
         newMedia.data("post", post)
         return newCard;
     }
