@@ -4,13 +4,10 @@ $(document).ready(function () {
     const paymentInput = $("#paymentAmount");
     const subjectInput = $("#subjectType");
     const descriptionInput = $("#descriptionInput");
-<<<<<<< HEAD
-=======
     const nameInput = $("#nameInput");
     const emailInput = $("#emailInput");
     
     
->>>>>>> 201a3575f5277f321ef88d461877998009d5c90d
     
     const forumSubmit = (event) => {
         event.preventDefault();
@@ -35,7 +32,19 @@ $(document).ready(function () {
             window.location.href = "/posts.html";
             console.log(post);
         });
-    }
+        
+    };
+
+    function updatePost(post) {
+        $.ajax({
+          method: "PUT",
+          url: "/api/posts",
+          data: post
+        })
+          .then(function() {
+            window.location.href = "/post";
+          });
+      }
     
     $("#submitBtn").on("click", forumSubmit);
     
