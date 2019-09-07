@@ -1,4 +1,8 @@
-body {
-    text-align: center;
-    color: aqua;
-};
+
+.my-5 {
+    margin-top: -2rem!important;
+}
+
+#hpContent {
+    border-radius: 10px;
+}

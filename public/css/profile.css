@@ -1,0 +1,21 @@
+#logo {
+    padding: 5px;
+    margin-top: 5px;
+};
+
+#navbarNavDropdown {
+    margin-bottom: 5px;
+}
+
+.navbar-brand {
+    font-size: 2.25rem;
+}
+.card {
+    margin: 15px;
+}
+#forumContent{
+    margin: 15px;
+}
+.card-header{
+    background-color: #abb3ba!important;
+}
